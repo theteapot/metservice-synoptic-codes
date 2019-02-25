@@ -1,7 +1,13 @@
-function getLatLng ({ code = '' }) {
+const { StationNumbers } = require('./metserviceStations')
+
+function getStation ({ code = '' }) {
   if (!code || code === '') {
     throw new Error('Expected non empty string to be passed')
   }
+  let stationCode = code.match(/93[\d]{3}/g)
+  if (!stationCode) return
+  const station = StationNumbers[stationCode[0]]
+  return station
 }
 
 function getPrecipitation ({ code = '' }) {
@@ -66,4 +72,4 @@ function getPrecipitation ({ code = '' }) {
   return results
 }
 
-module.exports = { getPrecipitation }
+module.exports = { getPrecipitation, getStation }
