@@ -1,3 +1,9 @@
+function getLatLng ({ code = '' }) {
+  if (!code || code === '') {
+    throw new Error('Expected non empty string to be passed')
+  }
+}
+
 function getPrecipitation ({ code = '' }) {
   if (!code || code === '') {
     throw new Error('Expected non empty string to be passed')
