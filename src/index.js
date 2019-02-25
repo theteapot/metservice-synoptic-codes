@@ -3,7 +3,7 @@ function getPrecipitation ({ code = '' }) {
     throw new Error('Expected non empty string to be passed')
   }
   let rainSection = code.match(/[ ]6[\d]{4}[ ]/g)
-  if (!rainSection) throw new Error('Could not find any rain sections')
+  if (!rainSection) return
 
   let results = rainSection.map(rain => {
     rain = rain.trim()
