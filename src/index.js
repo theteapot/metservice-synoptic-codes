@@ -1,4 +1,4 @@
-const { StationNumbers } = require('./metserviceStations')
+const StationNumbers = require('./metserviceStations.json')
 
 function getStation ({ code = '' }) {
   if (!code || code === '') {
