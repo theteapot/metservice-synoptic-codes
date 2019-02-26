@@ -1,3 +1,5 @@
+![Build status](https://travis-ci.com/theteapot/metservice-synoptic-codes.svg?branch=master)
+
 # Provided functions
 
 - `getStation({code})`
